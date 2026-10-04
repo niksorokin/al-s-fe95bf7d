@@ -177,7 +177,7 @@ section.read .go{align-items:flex-start}
 </main>
 <script>
 (() => {
-  const slides = [...document.querySelectorAll('section')];
+  const slides = [...document.querySelectorAll('main > section')];
   let i = 0;
   const go = (n) => {
     i = Math.max(0, Math.min(slides.length - 1, n));
