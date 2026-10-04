@@ -74,7 +74,9 @@ section.read .body{margin:12px 0 0;max-width:760px;font-size:17px;line-height:1.
 .split .go{align-items:flex-start;margin-top:14px}
 section.read .go{align-items:flex-start}
 .mock{width:100%;max-width:1100px;margin-top:10px;pointer-events:none}
+.mock#alUnite,.mock:has(#alUnite){pointer-events:auto}
 .mock .alA-root,.mock .alB-root,.mock .alC-root{max-height:44vh;aspect-ratio:auto}
+#alUnite{max-height:52vh}
 @page{size:1440px 810px;margin:0}
 @media print{
   html,body{overflow:visible}
@@ -88,13 +90,13 @@ section.read .go{align-items:flex-start}
 <section class="read">
   <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span>Across Legal × Silow</span></div>
   <div class="inner">
-  <div class="eyebrow">Your reports</div>
-  <h2>Here are the reports you can have.</h2>
-  <p class="body">Three reports: one person’s work, how the team operates, and what you could automate. The previews are anonymized legal examples. Noah Hale and Adrian Cole are fictional.</p>
+  <div class="eyebrow">Your back office · real data</div>
+  <h2>Who does what — measured, not asked.</h2>
+  <p class="body">You asked how to see the real split of tasks across reception, billing, travel and marketing, and what nobody is doing. Three reports answer that, built from a few days of recorded work — not from people saying they work ten hours a day.</p>
   <div class="three">
-    <div><div class="n">01</div><div class="t">Individual report</div><div class="b">The work behind one person’s week.</div></div>
-    <div><div class="n">02</div><div class="t">Team report</div><div class="b">The full picture across the team.</div></div>
-    <div><div class="n">03</div><div class="t">Automation blueprint</div><div class="b">What software can run. What stays with a person.</div></div>
+    <div><div class="n">01</div><div class="t">Individual</div><div class="b">One person’s work, task by task, in real hours.</div></div>
+    <div><div class="n">02</div><div class="t">Team</div><div class="b">The same tasks across people: overlap, and work that falls through.</div></div>
+    <div><div class="n">03</div><div class="t">Blueprint</div><div class="b">A proposed new split of tasks, then what is still worth automating.</div></div>
   </div>
   </div>
   <div class="pg">01</div>
@@ -104,9 +106,9 @@ section.read .go{align-items:flex-start}
   <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span class="keys">← →</span></div>
   <div class="split">
     <div>
-      <div class="eyebrow">Individual report</div>
-      <h2>See the work behind one person’s day.</h2>
-      <p class="body">An individual report turns recorded work into a readable view of tasks and routines. Use it to choose which routine work you want to automate.</p>
+      <div class="eyebrow">Individual · real hours</div>
+      <h2>Real hours per task, not what people say.</h2>
+      <p class="body">Every task one person did, how long it actually took, how often it repeats. Built from recorded work, not a survey.</p>
       <div class="go"><div class="go-item"><a class="btn" href="https://silow.ai/r/examples-legal/" target="_blank" rel="noopener">View the individual example</a><div class="pw">Password <b>silow-examples-legal-2026</b></div></div></div>
     </div>
     <div class="shot">
@@ -121,9 +123,9 @@ section.read .go{align-items:flex-start}
   <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span class="keys">← →</span></div>
   <div class="split">
     <div>
-      <div class="eyebrow">Team report</div>
-      <h2>See the full picture across the team.</h2>
-      <p class="body">A team report brings individual work together so you can see how tasks move between people. Use it to decide where to redirect work.</p>
+      <div class="eyebrow">Team · overlap</div>
+      <h2>Where the same work is done twice.</h2>
+      <p class="body">Back-office people side by side, task by task: who does billing, who books travel, who covers marketing on top of reception, where two people do the same job, and the tasks nobody owns.</p>
       <div class="go"><div class="go-item"><a class="btn" href="https://silow.ai/r/examples-legal/" target="_blank" rel="noopener">View the team example</a><div class="pw">Password <b>silow-examples-legal-2026</b></div></div></div>
     </div>
     <div class="shot">
@@ -138,9 +140,9 @@ section.read .go{align-items:flex-start}
   <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span class="keys">← →</span></div>
   <div class="split">
     <div>
-      <div class="eyebrow">Automation blueprint</div>
-      <h2>See what an automation could look like.</h2>
-      <p class="body">A blueprint sets out how a selected task or process could work with software. It gives us something concrete to choose, shape, and build together.</p>
+      <div class="eyebrow">Blueprint · redistribute, then automate</div>
+      <h2>A new split of tasks, backed by the data.</h2>
+      <p class="body">A proposed redistribution — for example one person on reception and one specialist on billing and travel. It shows the hours each change moves, and the dropped tasks that come back into scope. You decide. Nothing changes until you do.</p>
       <div class="go"><div class="go-item"><a class="btn" href="https://silow.ai/r/examples-legal/" target="_blank" rel="noopener">View the blueprint example</a><div class="pw">Password <b>silow-examples-legal-2026</b></div></div></div>
     </div>
     <div class="shot">
@@ -154,9 +156,9 @@ section.read .go{align-items:flex-start}
 <section class="read">
   <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span class="keys">← →</span></div>
   <div class="inner">
-  <div class="eyebrow">What this enables</div>
-  <h2>With this picture, we can automate whatever you choose.</h2>
-  <p class="body">Start with a routine task, redirect work between people, or redesign a whole process. The reports are the starting point — not the limit of what we can build together.</p>
+  <div class="eyebrow">Then</div>
+  <h2>First rearrange. Then automate what is still repetitive.</h2>
+  <p class="body">Once roles are clear, the steps that are still repetitive — billing entries, travel bookings — are the ones worth automating. You choose which ones. We build them with your team.</p>
   </div>
   <div class="pg">05</div>
 </section>
@@ -166,8 +168,8 @@ section.read .go{align-items:flex-start}
   <div class="inner">
   <div class="eyebrow">Let’s start</div>
   <h2>We’ll wait for your reply by email.</h2>
-  <p class="body">Name a few people to record. We capture their week, send you the three reports, then automate together. Until then we wait for your email.</p>
-  <p class="note" style="margin-top:18px">Record selected people → review together → automate together.</p>
+  <p class="body">Name two or three back-office people — for example reception, billing and marketing. They record a few normal working days. You get the three reports. Then we agree the new split of tasks, and what to automate, together.</p>
+  <p class="note" style="margin-top:18px">Record → reports → rearrange → automate.</p>
   </div>
   <div class="pg">06</div>
 </section>
@@ -192,7 +194,7 @@ section.read .go{align-items:flex-start}
     else if (e.key === 'End') { e.preventDefault(); go(slides.length - 1); }
   });
   document.addEventListener('click', (e) => {
-    if (e.target.closest('a,button,input,textarea')) return;
+    if (e.target.closest('a,button,input,textarea,#alUnite')) return;
     if (e.clientX > innerWidth * 0.78) go(i + 1);
     else if (e.clientX < innerWidth * 0.22) go(i - 1);
   });
