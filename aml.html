@@ -74,7 +74,9 @@ section.read .body{margin:12px 0 0;max-width:760px;font-size:17px;line-height:1.
 .split .go{align-items:flex-start;margin-top:14px}
 section.read .go{align-items:flex-start}
 .mock{width:100%;max-width:1100px;margin-top:10px;pointer-events:none}
+.mock#alUnite,.mock:has(#alUnite){pointer-events:auto}
 .mock .alA-root,.mock .alB-root,.mock .alC-root{max-height:44vh;aspect-ratio:auto}
+#alUnite{max-height:52vh}
 @page{size:1440px 810px;margin:0}
 @media print{
   html,body{overflow:visible}
@@ -174,158 +176,296 @@ section.read .go{align-items:flex-start}
 <section class="read">
   <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span class="keys">← →</span></div>
   <div class="inner">
-  <div class="eyebrow">How it could look for you · the client</div>
-  <h2>One place to open the file, declare, and see what is still missing.</h2>
-  <p class="body">Your client would get a link. They complete the file. If a document is missing, they see it here — and the bot can also ask by email.</p>
-  <div class="mock">
-<style>
-.alA-root{box-sizing:border-box;width:100%;max-width:1100px;aspect-ratio:16/9;margin:0 auto;background:#fff;color:#0E0E0C;font:inherit;border:1px solid #E8E8E6;border-radius:14px;display:flex;flex-direction:column;overflow:hidden}
-.alA-root *{box-sizing:border-box;margin:0;padding:0;font:inherit}
-.alA-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;border-bottom:1px solid #E8E8E6}
-.alA-brand{font-weight:600;letter-spacing:-.01em;font-size:15px}
-.alA-steps{display:flex;gap:8px;align-items:center;font-size:13px;color:#6B6A66}
-.alA-dot{width:8px;height:8px;border-radius:50%;background:#E8E8E6}
-.alA-dot.on{background:#3B5BFF}
-.alA-main{flex:1;padding:32px 32px 24px;display:flex;flex-direction:column;gap:24px}
-.alA-title{font-size:30px;font-weight:600;letter-spacing:-.02em}
-.alA-sub{font-size:15px;color:#6B6A66;margin-top:6px}
-.alA-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1}
-.alA-card{border:1px solid #E8E8E6;border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:16px}
-.alA-h{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6B6A66}
-.alA-field{display:flex;flex-direction:column;gap:4px;padding-bottom:14px;border-bottom:1px solid #E8E8E6}
-.alA-field:last-child{border-bottom:0;padding-bottom:0}
-.alA-label{font-size:13px;color:#6B6A66}
-.alA-value{font-size:16px;font-weight:500}
-.alA-owner{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;border:1px solid #E8E8E6;border-radius:8px;padding:12px 14px;font-size:15px}
-.alA-owner span:nth-child(2),.alA-owner span:nth-child(3){color:#6B6A66;font-size:14px}
-.alA-list{list-style:none;display:flex;flex-direction:column;gap:10px}
-.alA-item{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:12px;border:1px solid #E8E8E6;border-radius:8px;padding:14px}
-.alA-ic{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
-.alA-ic.done{background:#3B5BFF;color:#fff}
-.alA-ic.miss{border:1.5px dashed #6B6A66;color:#6B6A66}
-.alA-name{font-size:15px;font-weight:500}
-.alA-tag{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px}
-.alA-tag.done{color:#3B5BFF;background:rgba(59,91,255,.08)}
-.alA-tag.miss{color:#0E0E0C;border:1px solid #0E0E0C}
-.alA-upload{font-size:13px;color:#3B5BFF;font-weight:500;margin-top:2px}
-.alA-actions{display:flex;justify-content:space-between;align-items:center}
-.alA-note{font-size:13px;color:#6B6A66}
-.alA-btn{background:#3B5BFF;color:#fff;border:0;border-radius:8px;padding:12px 28px;font-size:15px;font-weight:600}
-.alA-foot{padding:12px 32px;border-top:1px solid #E8E8E6;font-size:11px;color:#6B6A66}
+  <div class="eyebrow">How it could look · the whole file</div>
+  <h2>One file. Everything visible. Click through it.</h2>
+  <p class="body">Declarations, documents, public registry, your screening provider and monitoring — united. Click a tab or a status. Nothing is approved automatically.</p>
+  <style>
+#alUnite{--alU-blue:#3B5BFF;--alU-ink:#0E0E0C;--alU-line:#E8E8E6;--alU-mute:#6B6B66;--alU-soft:#F6F6F4;box-sizing:border-box;width:100%;max-width:1100px;height:48vh;min-height:400px;margin:0 auto;background:#fff;color:var(--alU-ink);border:1px solid var(--alU-line);border-radius:14px;display:flex;flex-direction:column;overflow:hidden;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;text-align:left}
+#alUnite *,#alUnite *::before,#alUnite *::after{box-sizing:border-box}
+#alUnite [hidden]{display:none!important}
+#alUnite button{font:inherit;cursor:pointer}
+#alUnite .alU-head{display:flex;align-items:center;gap:16px;padding:12px 18px;border-bottom:1px solid var(--alU-line)}
+#alUnite .alU-brand{display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+#alUnite .alU-dot{width:10px;height:10px;border-radius:50%;background:var(--alU-blue)}
+#alUnite .alU-file{display:flex;flex-direction:column;flex:1;min-width:0;padding-left:16px;border-left:1px solid var(--alU-line)}
+#alUnite .alU-file span{font-size:12px;color:var(--alU-mute)}
+#alUnite .alU-tabs{display:flex;gap:2px;padding:0 12px;border-bottom:1px solid var(--alU-line);overflow-x:auto}
+#alUnite .alU-tab{background:none;border:0;border-bottom:2px solid transparent;padding:10px 12px;color:var(--alU-mute);font-weight:600;white-space:nowrap}
+#alUnite .alU-tab:hover{color:var(--alU-ink)}
+#alUnite .alU-tab.alU-on{color:var(--alU-ink);border-bottom-color:var(--alU-blue)}
+#alUnite .alU-body{flex:1;overflow:auto;padding:16px 18px}
+#alUnite .alU-h{margin:0 0 2px;font-size:16px;font-weight:700;letter-spacing:-.01em}
+#alUnite .alU-sub{margin:0 0 14px;color:var(--alU-mute);font-size:13px}
+#alUnite .alU-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
+#alUnite .alU-cell{display:flex;flex-direction:column;align-items:flex-start;gap:6px;background:#fff;border:1px solid var(--alU-line);border-radius:10px;padding:10px 12px;text-align:left;color:var(--alU-ink)}
+#alUnite .alU-cell:hover{border-color:var(--alU-blue)}
+#alUnite .alU-k{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--alU-mute);font-weight:600}
+#alUnite .alU-note{font-size:12px;color:var(--alU-mute)}
+#alUnite .alU-pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+#alUnite .alU-p-ok{background:#E8F4EC;color:#1E7F4A}
+#alUnite .alU-p-warn{background:#FFF2DF;color:#9A5700}
+#alUnite .alU-p-flag{background:#FCE9E7;color:#B72D27}
+#alUnite .alU-p-blue{background:#EEF1FF;color:var(--alU-blue)}
+#alUnite .alU-p-grey{background:var(--alU-soft);color:var(--alU-ink)}
+#alUnite .alU-list{list-style:none;margin:0;padding:0;border:1px solid var(--alU-line);border-radius:10px}
+#alUnite .alU-list li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid var(--alU-line)}
+#alUnite .alU-list li:last-child{border-bottom:0}
+#alUnite .alU-list .alU-grow{flex:1}
+#alUnite .alU-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#alUnite .alU-card{border:1px solid var(--alU-line);border-radius:10px;padding:12px}
+#alUnite .alU-card h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--alU-mute)}
+#alUnite .alU-table{width:100%;border-collapse:collapse;font-size:13px}
+#alUnite .alU-table th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--alU-mute);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--alU-line)}
+#alUnite .alU-table td{padding:7px 8px;border-bottom:1px solid var(--alU-line);vertical-align:top}
+#alUnite .alU-table tr:last-child td{border-bottom:0}
+#alUnite .alU-table tr.alU-bad td{background:#FFF7F6}
+#alUnite .alU-hand{margin-top:14px;border:1px solid #F3C9C5;border-left:4px solid #B72D27;background:#FFF8F7;border-radius:10px;padding:12px 14px}
+#alUnite .alU-hand strong{display:block;margin-bottom:2px}
+#alUnite .alU-info{margin-top:14px;border:1px solid var(--alU-line);border-left:4px solid var(--alU-blue);background:#F7F8FF;border-radius:10px;padding:12px 14px}
+#alUnite .alU-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+#alUnite .alU-btn{background:var(--alU-blue);color:#fff;border:1px solid var(--alU-blue);border-radius:8px;padding:7px 12px;font-weight:600;font-size:13px}
+#alUnite .alU-btn:hover{background:#2E4BE0}
+#alUnite .alU-ghost{background:#fff;color:var(--alU-ink);border:1px solid var(--alU-line);border-radius:8px;padding:6px 11px;font-weight:600;font-size:12.5px;white-space:nowrap}
+#alUnite .alU-ghost:hover{border-color:var(--alU-blue);color:var(--alU-blue)}
+#alUnite .alU-big{font-size:22px;font-weight:700;letter-spacing:-.02em}
+#alUnite .alU-tl{list-style:none;margin:0;padding:0}
+#alUnite .alU-tl li{position:relative;padding:0 0 12px 18px;font-size:13px}
+#alUnite .alU-tl li::before{content:"";position:absolute;left:3px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--alU-line)}
+#alUnite .alU-tl li.alU-t-flag::before{background:#B72D27}
+#alUnite .alU-tl li.alU-t-blue::before{background:var(--alU-blue)}
+#alUnite .alU-tl .alU-d{display:block;font-size:11.5px;color:var(--alU-mute)}
+#alUnite .alU-foot{display:flex;justify-content:space-between;gap:12px;padding:9px 18px;border-top:1px solid var(--alU-line);background:var(--alU-soft);font-size:12.5px}
+#alUnite .alU-foot strong{font-weight:700}
+#alUnite .alU-foot span{color:var(--alU-mute)}
+@media (max-width:760px){#alUnite .alU-row{grid-template-columns:repeat(2,1fr)}#alUnite .alU-two{grid-template-columns:1fr}#alUnite .alU-head .alU-pill{display:none}}
 </style>
-<div class="alA-root">
-  <div class="alA-bar">
-    <div class="alA-brand">Across Legal</div>
-    <div class="alA-steps"><span class="alA-dot on"></span><span class="alA-dot on"></span><span class="alA-dot"></span>Step 2 of 3</div>
-  </div>
-  <div class="alA-main">
-    <div>
-      <div class="alA-title">Open your file</div>
-      <div class="alA-sub">Check your details and add the documents still missing.</div>
+
+<div class="mock" id="alUnite">
+  <div class="alU-head">
+    <div class="alU-brand"><span class="alU-dot"></span>Across Legal</div>
+    <div class="alU-file">
+      <strong>Norte Mar Consulting SL</strong>
+      <span>File AL-2026-0418 &middot; Client since 15 Jan 2026 &middot; Risk: medium (set by lawyer)</span>
     </div>
-    <div class="alA-grid">
-      <div class="alA-card">
-        <div class="alA-h">Company</div>
-        <div class="alA-field"><span class="alA-label">Company name</span><span class="alA-value">Norte Mar Consulting SL</span></div>
-        <div class="alA-field"><span class="alA-label">Tax ID</span><span class="alA-value">B-12345678</span></div>
-        <div class="alA-field">
-          <span class="alA-label">Beneficial owners</span>
-          <div class="alA-owner"><span>Lucía Ferrer Vidal</span><span>Director</span><span>100%</span></div>
+    <span class="alU-pill alU-p-warn">3 items need a lawyer</span>
+  </div>
+
+  <div class="alU-tabs" role="tablist">
+    <button class="alU-tab alU-on" role="tab" aria-selected="true" data-alu-go="overview">Overview</button>
+    <button class="alU-tab" role="tab" aria-selected="false" data-alu-go="client">Client</button>
+    <button class="alU-tab" role="tab" aria-selected="false" data-alu-go="registry">Registry</button>
+    <button class="alU-tab" role="tab" aria-selected="false" data-alu-go="screening">Screening</button>
+    <button class="alU-tab" role="tab" aria-selected="false" data-alu-go="monitor">Monitor</button>
+  </div>
+
+  <div class="alU-body">
+
+    <!-- OVERVIEW -->
+    <section data-alu-panel="overview" role="tabpanel">
+      <h3 class="alU-h">The whole file in one view</h3>
+      <p class="alU-sub">Client declarations, documents, public registry, your screening provider and monitoring, together. Click any step.</p>
+      <div class="alU-row">
+        <button class="alU-cell" data-alu-go="client">
+          <span class="alU-k">Declarations</span>
+          <span class="alU-pill alU-p-ok">3 of 3 signed</span>
+          <span class="alU-note">KYC, UBO, source of funds</span>
+        </button>
+        <button class="alU-cell" data-alu-go="client">
+          <span class="alU-k">Documents</span>
+          <span class="alU-pill alU-p-warn">1 missing</span>
+          <span class="alU-note">Source of funds evidence</span>
+        </button>
+        <button class="alU-cell" data-alu-go="registry">
+          <span class="alU-k">Registry</span>
+          <span class="alU-pill alU-p-flag">Mismatch</span>
+          <span class="alU-note">Administrator not declared</span>
+        </button>
+        <button class="alU-cell" data-alu-go="screening">
+          <span class="alU-k">Screening</span>
+          <span class="alU-pill alU-p-warn">Possible match</span>
+          <span class="alU-note">From your provider &middot; lawyer decides</span>
+        </button>
+        <button class="alU-cell" data-alu-go="monitor">
+          <span class="alU-k">Monitoring</span>
+          <span class="alU-pill alU-p-warn">Change flagged</span>
+          <span class="alU-note">Review brought forward</span>
+        </button>
+      </div>
+
+      <div class="alU-k" style="margin-bottom:6px">For the lawyer</div>
+      <ul class="alU-list">
+        <li>
+          <span class="alU-pill alU-p-flag">Registry</span>
+          <span class="alU-grow">The public registry shows an administrator the client did not declare: Pablo Vidal Ruiz.</span>
+          <button class="alU-ghost" data-alu-go="registry">Open registry &rarr;</button>
+        </li>
+        <li>
+          <span class="alU-pill alU-p-warn">Screening</span>
+          <span class="alU-grow">Your provider returned a possible PEP match for Pablo Vidal Ruiz.</span>
+          <button class="alU-ghost" data-alu-go="screening">Open screening &rarr;</button>
+        </li>
+        <li>
+          <span class="alU-pill alU-p-warn">Documents</span>
+          <span class="alU-grow">Source of funds evidence is still missing. Requested 02 Oct 2026.</span>
+          <button class="alU-ghost" data-alu-go="client">Open client &rarr;</button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CLIENT -->
+    <section data-alu-panel="client" role="tabpanel" hidden>
+      <h3 class="alU-h">Client: what they declared and sent</h3>
+      <p class="alU-sub">Everything the client gave you, in one place.</p>
+      <div class="alU-two">
+        <div class="alU-card">
+          <h4>Declarations</h4>
+          <table class="alU-table">
+            <tr><th>Declaration</th><th>Date</th><th>Status</th></tr>
+            <tr><td>KYC questionnaire</td><td>15 Jan 2026</td><td><span class="alU-pill alU-p-ok">Signed</span></td></tr>
+            <tr><td>UBO declaration</td><td>15 Jan 2026</td><td><span class="alU-pill alU-p-ok">Signed</span></td></tr>
+            <tr><td>Source of funds declaration</td><td>15 Jan 2026</td><td><span class="alU-pill alU-p-ok">Signed</span></td></tr>
+          </table>
+          <h4 style="margin-top:14px">Declared people</h4>
+          <table class="alU-table">
+            <tr><th>Person</th><th>Role</th></tr>
+            <tr><td>Javier Molina Soto</td><td>Administrator &middot; UBO 60%</td></tr>
+            <tr><td>Laura Ferrer Ortega</td><td>Administrator &middot; UBO 40%</td></tr>
+          </table>
+        </div>
+        <div class="alU-card">
+          <h4>Documents</h4>
+          <table class="alU-table">
+            <tr><th>Document</th><th>Status</th></tr>
+            <tr><td>Deed of incorporation</td><td><span class="alU-pill alU-p-ok">Received</span></td></tr>
+            <tr><td>CIF card</td><td><span class="alU-pill alU-p-ok">Received</span></td></tr>
+            <tr><td>ID &middot; Javier Molina Soto<br><span class="alU-note">Valid until 2029</span></td><td><span class="alU-pill alU-p-ok">Received</span></td></tr>
+            <tr><td>ID &middot; Laura Ferrer Ortega<br><span class="alU-note">Expires 03 Mar 2027</span></td><td><span class="alU-pill alU-p-ok">Received</span></td></tr>
+            <tr class="alU-bad"><td>Source of funds evidence<br><span class="alU-note">Requested 02 Oct 2026</span></td><td><span class="alU-pill alU-p-warn">Missing</span></td></tr>
+          </table>
         </div>
       </div>
-      <div class="alA-card">
-        <div class="alA-h">Documents · 2 of 3</div>
-        <ul class="alA-list">
-          <li class="alA-item"><span class="alA-ic done">✓</span><span class="alA-name">Passport</span><span class="alA-tag done">Done</span></li>
-          <li class="alA-item"><span class="alA-ic miss">!</span><span><span class="alA-name">Registry extract</span><br><span class="alA-upload">Upload file</span></span><span class="alA-tag miss">Missing</span></li>
-          <li class="alA-item"><span class="alA-ic done">✓</span><span class="alA-name">Proof of address</span><span class="alA-tag done">Done</span></li>
-        </ul>
+      <div class="alU-acts">
+        <button class="alU-btn" data-alu-go="registry">Next: compare with registry &rarr;</button>
+        <button class="alU-ghost" data-alu-go="overview">Back to overview</button>
       </div>
-    </div>
-    <div class="alA-actions">
-      <span class="alA-note">You can come back to this later.</span>
-      <button class="alA-btn">Continue</button>
-    </div>
+    </section>
+
+    <!-- REGISTRY -->
+    <section data-alu-panel="registry" role="tabpanel" hidden>
+      <h3 class="alU-h">Registry: declared vs public record</h3>
+      <p class="alU-sub">Source: public registry (Registro Mercantil) &middot; checked 02 Oct 2026</p>
+      <table class="alU-table">
+        <tr><th>Field</th><th>Declared by client</th><th>Public registry</th><th>Result</th></tr>
+        <tr><td>Company name</td><td>Norte Mar Consulting SL</td><td>Norte Mar Consulting SL</td><td><span class="alU-pill alU-p-ok">Match</span></td></tr>
+        <tr><td>Registered address</td><td>Calle de la Paz 14, Valencia</td><td>Calle de la Paz 14, Valencia</td><td><span class="alU-pill alU-p-ok">Match</span></td></tr>
+        <tr><td>Share capital</td><td>3,000 EUR</td><td>3,000 EUR</td><td><span class="alU-pill alU-p-ok">Match</span></td></tr>
+        <tr class="alU-bad"><td>Administrators</td><td>Javier Molina Soto<br>Laura Ferrer Ortega</td><td>Javier Molina Soto<br>Laura Ferrer Ortega<br><strong>Pablo Vidal Ruiz</strong> <span class="alU-note">(appointed 12 Sep 2026)</span></td><td><span class="alU-pill alU-p-flag">Mismatch</span></td></tr>
+      </table>
+      <div class="alU-hand">
+        <strong>Hand raised: lawyer review needed</strong>
+        Pablo Vidal Ruiz appears in the public registry but not in the client's declarations. Suggested next step: ask the client for an updated declaration. Pablo Vidal Ruiz has been sent to your screening provider.
+        <div class="alU-acts">
+          <button class="alU-btn" data-alu-go="screening">See screening result &rarr;</button>
+          <button class="alU-ghost" data-alu-go="overview">Back to overview</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENING -->
+    <section data-alu-panel="screening" role="tabpanel" hidden>
+      <h3 class="alU-h">Screening: result from your provider</h3>
+      <p class="alU-sub"><span class="alU-pill alU-p-blue">Your provider</span> &nbsp;PEP, sanctions and adverse media &middot; received 12 Sep 2026</p>
+      <table class="alU-table">
+        <tr><th>Person</th><th>Sanctions</th><th>PEP</th><th>Adverse media</th></tr>
+        <tr><td>Javier Molina Soto</td><td><span class="alU-pill alU-p-ok">No hit</span></td><td><span class="alU-pill alU-p-ok">No hit</span></td><td><span class="alU-pill alU-p-ok">No hit</span></td></tr>
+        <tr><td>Laura Ferrer Ortega</td><td><span class="alU-pill alU-p-ok">No hit</span></td><td><span class="alU-pill alU-p-ok">No hit</span></td><td><span class="alU-pill alU-p-ok">No hit</span></td></tr>
+        <tr class="alU-bad"><td>Pablo Vidal Ruiz</td><td><span class="alU-pill alU-p-ok">No hit</span></td><td><span class="alU-pill alU-p-warn">Possible match &middot; 72%</span></td><td><span class="alU-pill alU-p-ok">No hit</span></td></tr>
+      </table>
+      <div class="alU-two" style="margin-top:14px">
+        <div class="alU-card">
+          <h4>Provider record</h4>
+          Pablo Vidal Ruiz, former local councillor (2015&ndash;2019).<br>
+          <span class="alU-note">Year of birth in provider record: 1971. Not yet in the client file.</span>
+        </div>
+        <div class="alU-card">
+          <h4>Lawyer decision</h4>
+          <span class="alU-pill alU-p-grey">Pending</span>
+          <p class="alU-note" style="margin:8px 0 0">The lawyer decides: match, not a match, or ask the client for more. Across Legal records the decision and who made it. It does not decide for you.</p>
+        </div>
+      </div>
+      <div class="alU-acts">
+        <button class="alU-btn" data-alu-go="monitor">Next: monitoring &rarr;</button>
+        <button class="alU-ghost" data-alu-go="registry">Back to registry</button>
+      </div>
+    </section>
+
+    <!-- MONITOR -->
+    <section data-alu-panel="monitor" role="tabpanel" hidden>
+      <h3 class="alU-h">Monitor: what changed and what comes next</h3>
+      <p class="alU-sub">Registry changes, provider re-screens and expiring documents, watched for this file.</p>
+      <div class="alU-two">
+        <div class="alU-card">
+          <h4>Next review</h4>
+          <div class="alU-big">15 Oct 2026</div>
+          <p class="alU-note" style="margin:4px 0 10px">Brought forward from 15 Jan 2027 because of the change below. Suggested; the lawyer confirms.</p>
+          <h4>Watching</h4>
+          <table class="alU-table">
+            <tr><td>Public registry changes</td><td><span class="alU-pill alU-p-blue">On</span></td></tr>
+            <tr><td>Re-screening by your provider</td><td><span class="alU-pill alU-p-blue">On</span></td></tr>
+            <tr><td>ID expiry &middot; Laura Ferrer Ortega</td><td><span class="alU-note">03 Mar 2027</span></td></tr>
+          </table>
+        </div>
+        <div class="alU-card">
+          <h4>Timeline</h4>
+          <ul class="alU-tl">
+            <li class="alU-t-blue">Source of funds evidence requested from client<span class="alU-d">02 Oct 2026</span></li>
+            <li class="alU-t-flag">Change flagged: new administrator in the registry, Pablo Vidal Ruiz<span class="alU-d">12 Sep 2026 &middot; sent to your provider the same day</span></li>
+            <li>Annual review planned<span class="alU-d">15 Jan 2027 &middot; now moved to 15 Oct 2026</span></li>
+            <li>Client onboarded &middot; declarations signed<span class="alU-d">15 Jan 2026</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="alU-acts">
+        <button class="alU-btn" data-alu-go="overview">Back to overview</button>
+        <button class="alU-ghost" data-alu-go="registry">See the registry change</button>
+      </div>
+    </section>
+
   </div>
-  <div class="alA-foot">Across Legal · onboarding</div>
+
+  <div class="alU-foot">
+    <strong>Nothing approved automatically. Your provider stays.</strong>
+    <span>Example &middot; fictional client</span>
+  </div>
 </div>
-</div>
+
+<script>
+(function(){
+  var root=document.getElementById('alUnite');
+  if(!root)return;
+  function show(name){
+    var panels=root.querySelectorAll('[data-alu-panel]');
+    for(var i=0;i<panels.length;i++){panels[i].hidden=panels[i].getAttribute('data-alu-panel')!==name;}
+    var tabs=root.querySelectorAll('.alU-tab');
+    for(var j=0;j<tabs.length;j++){
+      var on=tabs[j].getAttribute('data-alu-go')===name;
+      tabs[j].classList.toggle('alU-on',on);
+      tabs[j].setAttribute('aria-selected',on?'true':'false');
+    }
+    var body=root.querySelector('.alU-body');
+    if(body)body.scrollTop=0;
+  }
+  root.addEventListener('click',function(e){
+    var el=e.target;
+    while(el&&el!==root&&!(el.getAttribute&&el.getAttribute('data-alu-go'))){el=el.parentNode;}
+    if(!el||el===root)return;
+    show(el.getAttribute('data-alu-go'));
+  });
+  show('overview');
+})();
+</script>
   </div>
   <div class="pg">04</div>
-</section>
-
-<section class="read">
-  <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span class="keys">← →</span></div>
-  <div class="inner">
-  <div class="eyebrow">How it could look for you · the lawyer</div>
-  <h2>Each value next to its source. Raise the hand when it does not match.</h2>
-  <p class="body">Your lawyer opens a prepared file. Nothing is approved automatically. A possible PEP or sanctions match stays with your provider — you decide.</p>
-  <div class="mock">
-<style>
-.alC-root{box-sizing:border-box;width:100%;max-width:1100px;aspect-ratio:16/9;margin:0 auto;background:#fff;color:#0E0E0C;font:inherit;border:1px solid #E8E8E6;border-radius:14px;display:flex;flex-direction:column;overflow:hidden}
-.alC-root *{box-sizing:border-box;margin:0;padding:0;font:inherit}
-.alC-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;border-bottom:1px solid #E8E8E6}
-.alC-brand{font-weight:600;font-size:15px}
-.alC-crumb{font-size:13px;color:#6B6A66}
-.alC-head{padding:28px 32px 20px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
-.alC-title{font-size:28px;font-weight:600;letter-spacing:-.02em}
-.alC-sub{font-size:14px;color:#6B6A66;margin-top:6px}
-.alC-status{font-size:13px;font-weight:600;padding:6px 12px;border:1px solid #0E0E0C;border-radius:999px;white-space:nowrap}
-.alC-table{margin:0 32px;border:1px solid #E8E8E6;border-radius:12px;overflow:hidden}
-.alC-th,.alC-tr{display:grid;grid-template-columns:170px 1fr 1fr 210px;gap:20px;padding:14px 22px;align-items:center}
-.alC-th{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6B6A66;border-bottom:1px solid #E8E8E6}
-.alC-tr{padding:20px 22px}
-.alC-tr+.alC-tr{border-top:1px solid #E8E8E6}
-.alC-check{font-size:15px;font-weight:600}
-.alC-cell{display:flex;flex-direction:column;gap:4px}
-.alC-cell small{font-size:12px;color:#6B6A66}
-.alC-cell span{font-size:15px}
-.alC-cell span.diff{background:rgba(59,91,255,.08);box-shadow:inset 0 -2px 0 #3B5BFF;align-self:flex-start;padding:0 3px}
-.alC-span{grid-column:2 / span 2;font-size:15px}
-.alC-span em{font-style:normal;color:#6B6A66;display:block;font-size:13px;margin-top:4px}
-.alC-flag{justify-self:start;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#3B5BFF;border:1px solid #3B5BFF;border-radius:999px;padding:6px 12px}
-.alC-flag::before{content:"";width:7px;height:7px;border-radius:50%;background:#3B5BFF}
-.alC-open{justify-self:start;font-size:13px;font-weight:600;color:#0E0E0C;border:1px dashed #6B6A66;border-radius:999px;padding:6px 12px}
-.alC-foot{margin-top:auto;padding:18px 32px;border-top:1px solid #E8E8E6;display:flex;justify-content:space-between;align-items:center}
-.alC-note{font-size:13px;color:#6B6A66}
-.alC-btns{display:flex;gap:12px}
-.alC-btn{border-radius:8px;padding:12px 22px;font-size:15px;font-weight:600;border:1px solid #E8E8E6;background:#fff;color:#0E0E0C}
-.alC-btn.pri{background:#3B5BFF;border-color:#3B5BFF;color:#fff}
-</style>
-<div class="alC-root">
-  <div class="alC-bar">
-    <div class="alC-brand">Across Legal</div>
-    <div class="alC-crumb">Files / Onboarding / Review</div>
-  </div>
-  <div class="alC-head">
-    <div>
-      <div class="alC-title">File review · Norte Mar Consulting SL</div>
-      <div class="alC-sub">Tax ID B-12345678 · 2 items need a lawyer</div>
-    </div>
-    <div class="alC-status">Awaiting your decision</div>
-  </div>
-  <div class="alC-table">
-    <div class="alC-th"><span>Check</span><span>Declared by client</span><span>Source</span><span>Status</span></div>
-    <div class="alC-tr">
-      <span class="alC-check">Director</span>
-      <div class="alC-cell"><small>Declared director</small><span>Lucía Ferrer Vidal</span></div>
-      <div class="alC-cell"><small>Registry director</small><span class="diff">Andrés Pons Mir</span></div>
-      <span class="alC-flag">Raise the hand</span>
-    </div>
-    <div class="alC-tr">
-      <span class="alC-check">PEP / sanctions</span>
-      <div class="alC-span">1 possible match<em>From your screening provider — you decide the match</em></div>
-      <span class="alC-open">Not decided</span>
-    </div>
-  </div>
-  <div class="alC-foot">
-    <span class="alC-note">Nothing is approved automatically.</span>
-    <div class="alC-btns"><button class="alC-btn">Request document</button><button class="alC-btn pri">Record decision</button></div>
-  </div>
-</div>
-</div>
-  </div>
-  <div class="pg">05</div>
 </section>
 
 <section class="read">
@@ -340,7 +480,7 @@ section.read .go{align-items:flex-start}
   </div>
   <p class="note" style="margin-top:18px">Reply “observe” or “talk” by email. We’ll wait.</p>
   </div>
-  <div class="pg">06</div>
+  <div class="pg">05</div>
 </section>
 
 </main>
@@ -363,7 +503,7 @@ section.read .go{align-items:flex-start}
     else if (e.key === 'End') { e.preventDefault(); go(slides.length - 1); }
   });
   document.addEventListener('click', (e) => {
-    if (e.target.closest('a,button,input,textarea')) return;
+    if (e.target.closest('a,button,input,textarea,#alUnite')) return;
     if (e.clientX > innerWidth * 0.78) go(i + 1);
     else if (e.clientX < innerWidth * 0.22) go(i - 1);
   });
