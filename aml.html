@@ -186,6 +186,11 @@ section.file .body{font-size:16px;max-width:920px}
 #alUnite *,#alUnite *::before,#alUnite *::after{box-sizing:border-box}
 #alUnite [hidden]{display:none!important}
 #alUnite button{font:inherit;cursor:pointer}
+#alUnite .alU-body,#alUnite [data-alu-panel],#alUnite .alU-h,#alUnite .alU-sub{text-align:left}
+#alUnite .alU-body{display:block;justify-content:flex-start}
+@keyframes alUpulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.55);opacity:.35}}
+#alUnite .alU-tab{position:relative}
+#alUnite .alU-tab.alU-hint::after{content:"";position:absolute;top:7px;right:0;width:8px;height:8px;border-radius:50%;background:#3B5BFF;box-shadow:0 0 0 0 rgba(59,91,255,.55);animation:alUpulse 1.15s ease-in-out infinite}
 #alUnite .alU-head{display:flex;align-items:center;gap:16px;padding:12px 18px;border-bottom:1px solid var(--alU-line)}
 #alUnite .alU-brand{display:flex;align-items:center;gap:8px;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
 #alUnite .alU-dot{width:10px;height:10px;border-radius:50%;background:var(--alU-blue)}
@@ -263,7 +268,7 @@ section.file .body{font-size:16px;max-width:920px}
   <div class="alU-body">
 
     <!-- OVERVIEW -->
-    <section data-alu-panel="overview" role="tabpanel">
+    <div data-alu-panel="overview" role="tabpanel">
       <h3 class="alU-h">The whole file in one view</h3>
       <p class="alU-sub">Client declarations, documents, public registry, your screening provider and monitoring, together. Click any step.</p>
       <div class="alU-row">
@@ -312,10 +317,10 @@ section.file .body{font-size:16px;max-width:920px}
           <button class="alU-ghost" data-alu-go="client">Open client &rarr;</button>
         </li>
       </ul>
-    </section>
+    </div>
 
     <!-- CLIENT -->
-    <section data-alu-panel="client" role="tabpanel" hidden>
+    <div data-alu-panel="client" role="tabpanel" hidden>
       <h3 class="alU-h">Client: what they declared and sent</h3>
       <p class="alU-sub">Everything the client gave you, in one place.</p>
       <div class="alU-two">
@@ -350,10 +355,10 @@ section.file .body{font-size:16px;max-width:920px}
         <button class="alU-btn" data-alu-go="registry">Next: compare with registry &rarr;</button>
         <button class="alU-ghost" data-alu-go="overview">Back to overview</button>
       </div>
-    </section>
+    </div>
 
     <!-- REGISTRY -->
-    <section data-alu-panel="registry" role="tabpanel" hidden>
+    <div data-alu-panel="registry" role="tabpanel" hidden>
       <h3 class="alU-h">Registry: declared vs public record</h3>
       <p class="alU-sub">Source: public registry (Registro Mercantil) &middot; checked 02 Oct 2026</p>
       <table class="alU-table">
@@ -371,10 +376,10 @@ section.file .body{font-size:16px;max-width:920px}
           <button class="alU-ghost" data-alu-go="overview">Back to overview</button>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- SCREENING -->
-    <section data-alu-panel="screening" role="tabpanel" hidden>
+    <div data-alu-panel="screening" role="tabpanel" hidden>
       <h3 class="alU-h">Screening: result from your provider</h3>
       <p class="alU-sub"><span class="alU-pill alU-p-blue">Your provider</span> &nbsp;PEP, sanctions and adverse media &middot; received 12 Sep 2026</p>
       <table class="alU-table">
@@ -399,10 +404,10 @@ section.file .body{font-size:16px;max-width:920px}
         <button class="alU-btn" data-alu-go="monitor">Next: monitoring &rarr;</button>
         <button class="alU-ghost" data-alu-go="registry">Back to registry</button>
       </div>
-    </section>
+    </div>
 
     <!-- MONITOR -->
-    <section data-alu-panel="monitor" role="tabpanel" hidden>
+    <div data-alu-panel="monitor" role="tabpanel" hidden>
       <h3 class="alU-h">Monitor: what changed and what comes next</h3>
       <p class="alU-sub">Registry changes, provider re-screens and expiring documents, watched for this file.</p>
       <div class="alU-two">
@@ -431,7 +436,7 @@ section.file .body{font-size:16px;max-width:920px}
         <button class="alU-btn" data-alu-go="overview">Back to overview</button>
         <button class="alU-ghost" data-alu-go="registry">See the registry change</button>
       </div>
-    </section>
+    </div>
 
   </div>
 
@@ -453,6 +458,13 @@ section.file .body{font-size:16px;max-width:920px}
       var on=tabs[j].getAttribute('data-alu-go')===name;
       tabs[j].classList.toggle('alU-on',on);
       tabs[j].setAttribute('aria-selected',on?'true':'false');
+      tabs[j].classList.remove('alU-hint');
+    }
+    var order=['overview','client','registry','screening','monitor'];
+    var ix=order.indexOf(name);
+    var next=order[ix<order.length-1?ix+1:0];
+    for(var k=0;k<tabs.length;k++){
+      if(tabs[k].getAttribute('data-alu-go')===next) tabs[k].classList.add('alU-hint');
     }
     var body=root.querySelector('.alU-body');
     if(body)body.scrollTop=0;
