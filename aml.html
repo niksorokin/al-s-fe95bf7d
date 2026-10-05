@@ -76,7 +76,9 @@ section.read .go{align-items:flex-start}
 .mock{width:100%;max-width:1100px;margin-top:10px;pointer-events:none}
 .mock#alUnite,.mock:has(#alUnite){pointer-events:auto}
 .mock .alA-root,.mock .alB-root,.mock .alC-root{max-height:44vh;aspect-ratio:auto}
-#alUnite{max-height:52vh}
+section.file{padding:6vh 40px 3vh;justify-content:flex-start}
+section.file h2{font-size:clamp(26px,2.8vw,40px);max-width:22ch}
+section.file .body{font-size:16px;max-width:920px}
 @page{size:1440px 810px;margin:0}
 @media print{
   html,body{overflow:visible}
@@ -173,14 +175,14 @@ section.read .go{align-items:flex-start}
   <div class="pg">03</div>
 </section>
 
-<section class="read">
+<section class="read file">
   <div class="chrome"><img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjYiIGZpbGw9IndoaXRlIi8+CjxnIGZpbHRlcj0idXJsKCNmaWx0ZXIwX2lpXzg2XzE3MTApIj4KPGVsbGlwc2UgY3g9IjQwLjI5MiIgY3k9IjU5Ljk4MjIiIHJ4PSIyMS42ODQ2IiByeT0iMzMuODgyMyIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNDAuMjkyIDU5Ljk4MjIpIiBmaWxsPSJibGFjayIvPgo8ZWxsaXBzZSBjeD0iNzkuMjkyIiBjeT0iNjAuMjkxNyIgcng9IjIxLjY4NDYiIHJ5PSIzMy44ODIzIiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA3OS4yOTIgNjAuMjkxNykiIGZpbGw9ImJsYWNrIi8+CjwvZz4KPGRlZnM+CjxmaWx0ZXIgaWQ9ImZpbHRlcjBfaWlfODZfMTcxMCIgeD0iNy44NDM3NSIgeT0iMjciIHdpZHRoPSIxMDQuMTU2IiBoZWlnaHQ9IjY2IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHg9IjQiIGR5PSI0Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9InNoYXBlIiByZXN1bHQ9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIvPgo8ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAxMjcgMCIgcmVzdWx0PSJoYXJkQWxwaGEiLz4KPGZlT2Zmc2V0IGR4PSItNCIgZHk9Ii00Ii8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjYiLz4KPGZlQ29tcG9zaXRlIGluMj0iaGFyZEFscGhhIiBvcGVyYXRvcj0iYXJpdGhtZXRpYyIgazI9Ii0xIiBrMz0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDEgMCAwIDAgMC4yIDAiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbjI9ImVmZmVjdDFfaW5uZXJTaGFkb3dfODZfMTcxMCIgcmVzdWx0PSJlZmZlY3QyX2lubmVyU2hhZG93Xzg2XzE3MTAiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg==" alt="silow"><span class="keys">← →</span></div>
   <div class="inner">
   <div class="eyebrow">How it could look · the whole file</div>
-  <h2>One file. Everything visible. Click through it.</h2>
-  <p class="body">Declarations, documents, public registry, your screening provider and monitoring — united. Click a tab or a status. Nothing is approved automatically.</p>
+  <h2>One file. Click the tabs.</h2>
+  <p class="body">Declarations, registry, your screening provider, monitoring — in one place. Scroll inside the window.</p>
   <style>
-#alUnite{--alU-blue:#3B5BFF;--alU-ink:#0E0E0C;--alU-line:#E8E8E6;--alU-mute:#6B6B66;--alU-soft:#F6F6F4;box-sizing:border-box;width:100%;max-width:1100px;height:48vh;min-height:400px;margin:0 auto;background:#fff;color:var(--alU-ink);border:1px solid var(--alU-line);border-radius:14px;display:flex;flex-direction:column;overflow:hidden;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;text-align:left}
+#alUnite{--alU-blue:#3B5BFF;--alU-ink:#0E0E0C;--alU-line:#E8E8E6;--alU-mute:#6B6B66;--alU-soft:#F6F6F4;box-sizing:border-box;width:100%;max-width:1240px;height:calc(100vh - 200px);min-height:520px;margin:12px auto 0;background:#fff;color:var(--alU-ink);border:1px solid var(--alU-line);border-radius:14px;display:flex;flex-direction:column;overflow:hidden;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;text-align:left}
 #alUnite *,#alUnite *::before,#alUnite *::after{box-sizing:border-box}
 #alUnite [hidden]{display:none!important}
 #alUnite button{font:inherit;cursor:pointer}
@@ -193,7 +195,7 @@ section.read .go{align-items:flex-start}
 #alUnite .alU-tab{background:none;border:0;border-bottom:2px solid transparent;padding:10px 12px;color:var(--alU-mute);font-weight:600;white-space:nowrap}
 #alUnite .alU-tab:hover{color:var(--alU-ink)}
 #alUnite .alU-tab.alU-on{color:var(--alU-ink);border-bottom-color:var(--alU-blue)}
-#alUnite .alU-body{flex:1;overflow:auto;padding:16px 18px}
+#alUnite .alU-body{flex:1;min-height:0;overflow-y:scroll;overscroll-behavior:contain;padding:16px 18px}
 #alUnite .alU-h{margin:0 0 2px;font-size:16px;font-weight:700;letter-spacing:-.01em}
 #alUnite .alU-sub{margin:0 0 14px;color:var(--alU-mute);font-size:13px}
 #alUnite .alU-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
@@ -455,7 +457,9 @@ section.read .go{align-items:flex-start}
     var body=root.querySelector('.alU-body');
     if(body)body.scrollTop=0;
   }
+  root.addEventListener('wheel',function(e){e.stopPropagation();},{passive:true});
   root.addEventListener('click',function(e){
+    e.stopPropagation();
     var el=e.target;
     while(el&&el!==root&&!(el.getAttribute&&el.getAttribute('data-alu-go'))){el=el.parentNode;}
     if(!el||el===root)return;
